@@ -1,0 +1,14 @@
+<h1>Edit Page</h1>
+
+<%= form_tag(photo_path(@var.id), :method => :patch) do %>
+    <input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden">
+    
+    <label for="caption">Caption</label>
+    <input type="text" id="caption" name="caption" value="<%= @var.caption %>">
+    
+    <label for="caption">URL</label>
+    <input type="text" id="photo" name="photo" value="<%= @var.photo %>">
+    
+    <input type="submit">
+    
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Index Page</h1>
+
+<%= link_to "New", new_photo_path(), {:method => :get} %>
+
+<ul>
+    <%= @var.each do |i| %>
+        <li>
+            <img width="400px" height="400px" src="<%= i.photo %>">
+            <br>
+            <%= link_to "View", photo_path(i) %>
+            <br>
+            Caption: <%= i.caption %>
+        </li>
+    <% end %>
+</ul>
